@@ -19,7 +19,7 @@ background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: bottom;
     background-attachment: fixed;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 #title {
@@ -28,10 +28,38 @@ background-repeat: no-repeat;
 }
 #title h1 {
     color: wheat;
-    font-size: calc(var(--title-height) - 20px);
+    font-size: calc(var(--title-height) * .5);
     padding-top: 10px;
 }
 
+
+#socials a div:hover{
+    background-color: rgba(0,0,0,0);
+}
+#socials {
+    padding-top: 10px;
+}
+#socials a div {
+    margin: 0px 20px;
+    display:inline-block;
+    transition: all .2s;
+    background-color: rgba(0,0,0,1);
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 76px;
+    height: 76px;
+}
+#socials a div.linkedin {
+    background-image: url('./images/linkedin.png');
+}
+#socials a div.youtube {
+    background-image: url('./images/youtube.png');
+}
+#socials a div.twitter {
+    background-image: url('./images/twitter.png');
+}
 #louie-main {
     position: absolute;
 
@@ -126,7 +154,7 @@ article#wfc.active h2 {
     position: absolute;
     left: 10%;
     right: 10%;
-    top: 50%;
+    top: 40%;
     transform: rotate(-4deg);
     opacity: 0;
 }
@@ -194,4 +222,30 @@ article#about {
     width: 50%;
     padding-top: 20px;
     margin: auto;
+}
+
+@media only screen and (max-width: 700px) {
+    section#projects {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    article#wfc {
+        width: 100%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 700px) {
+    article#louie {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    article#about {
+        width: 90%;
+        margin: auto;
+    }
 }
