@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Grandstander', cursive;
+    src: url("https://cdhanna.github.io/louiepress/fonts/KOMIKAX_.ttf");
+}
+
+
+
+html, body {
+    height:100%;
+    font-family: 'Grandstander';
+} 
+html {
+    background-color: #f58e3f;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-attachment: fixed;
+}
