@@ -119,7 +119,7 @@ article#louie #louie-title img {
 }
 
 article#louie.active #louie-title img {
-    max-width: 70%;
+    max-width: 50%;
     transform: rotate(1deg);
 }
 
