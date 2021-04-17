@@ -2,6 +2,12 @@
     font-family: 'Grandstander', cursive;
     src: url("https://cdhanna.github.io/louiepress/fonts/KOMIKAX_.ttf");
 }
+@font-face {
+    font-family: 'LemonTuesday';
+    src: url("./fonts/LemonTuesday.otf");
+}
+
+
 
 html, body {
     height:100%;
@@ -25,11 +31,41 @@ background-repeat: no-repeat;
 #title {
     height: var(--title-height);
     text-align: center;
+    position:relative;
 }
 #title h1 {
-    color: wheat;
     font-size: calc(var(--title-height) * .5);
     padding-top: 10px;
+    font-family: 'LemonTuesday';
+}
+h3 {
+    font-weight: bolder;
+
+}
+
+#title h1.shadow {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    text-shadow: -2px 2px 10px rgba(255, 255, 255, .7), 0px 0px 20px rgba(255, 255, 255, .3);
+    margin-top: 0;
+}
+#about h3, 
+#title h1:not(.shadow) {
+  
+    background-color: #f3ec78;
+    background-image: linear-gradient(213deg,#ffd301 45%, #ee5c17 62%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
 
@@ -168,6 +204,12 @@ article#louie.active #louie-text {
     transform: rotate(-3deg);
     text-shadow: 1px 1px 6px black, 0px 0px 3px black, 3px 3px black;
 
+}
+
+.active .text {
+    background-color:#2d3139;
+    box-shadow: -5px 4px 0px 0px rgb(0 0 0 / 53%), -2px 0px 11px -2px rgb(0 0 0 / 88%);
+    padding: 12px;
 }
 
 .text{
