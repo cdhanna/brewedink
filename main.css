@@ -12,11 +12,12 @@
 html, body {
     height:100%;
     font-family: 'Grandstander';
+    margin: 0;
 } 
 html {
 
-    --title-height: 10vh;
-    --main-height: 70vh;
+    --title-height: 8vh;
+    --main-height: 67vh;
     --contain-height: 20vh;
 
     background: rgb(82,60,8);
@@ -40,7 +41,7 @@ background-repeat: no-repeat;
 }
 h3 {
     font-weight: bolder;
-
+    margin: 0;
 }
 
 #title h1.shadow {
@@ -291,7 +292,7 @@ article#louie {
     position: relative;
     height: var(--main-height);
     /* background-color:red; */
-    width:30%;
+    width:33%;
 }
 
 article#shoop {
@@ -300,7 +301,7 @@ article#shoop {
     position: relative;
     height: var(--main-height);
     /* background-color:red; */
-    width:30%;
+    width:33%;
 }
 
 article#wfc {
@@ -309,15 +310,15 @@ article#wfc {
     z-index: 0;
 
     height: var(--main-height);
-    width:30%;
+    width:34%;
 }
 
 article#about {
     height: var(--contain-height);
     text-align: center;
     color: white;
-    width: 50%;
-    padding-top: 20px;
+    width: 70%;
+    /* padding-top: 20px; */
     margin: auto;
 }
 
