@@ -118,6 +118,30 @@ h3 {
     transition: all .3s;
 }
 
+
+
+#shoop-main {
+    position: absolute;
+
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: -1;
+    background-image: url('./gifs/ShoopGif.gif');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: polygon(5% 6%,   94% 6%,   87% 85%, 7% 83%);
+    background-color: rgba(0,0,0,.8);
+    background-blend-mode: luminosity;
+
+    transition: all .3s;
+}
+
 #wfc-main {
     position: absolute;
 
@@ -141,22 +165,31 @@ h3 {
 }
 
 
-
+article#shoop.active,
 article#wfc.active,
 article#louie.active {
     width: 100%;
 }
 
+article#shoop #shoop-title img,
 article#louie #louie-title img {
     max-width: 40%;
     transform: rotate(-4deg);
     transition: all .3s;
     padding-top: 15px;
 }
+article#shoop #shoop-title img {
+    transform: rotate(1deg);
+}
+
 
 article#louie.active #louie-title img {
     max-width: 50%;
     transform: rotate(1deg);
+}
+article#shoop.active #shoop-title img {
+    max-width: 80%;
+    transform: rotate(-1deg);
 }
 
 article#wfc h2 {
@@ -178,6 +211,12 @@ article#wfc.active h2 {
 .text-wrap{
     position: absolute;
     bottom: 10%;
+    left: 0;
+    right: 0;
+}
+.text-wrap#shoop-wrap{
+    position: absolute;
+    bottom: 3%;
     left: 0;
     right: 0;
 }
@@ -229,6 +268,13 @@ article#louie.active #louie-main {
     clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 3% 100%);
     background-color: rgba(0,0,0,0);
 }
+article#shoop.active #shoop-main {
+    clip-path: polygon(3% 0%, 95% 0%, 100% 100%, 1% 100%);
+    background-origin: content-box;
+    background-position-y:80%;
+    background-color: rgba(0,0,0,0);
+}
+
 article#wfc.active #wfc-main {
     clip-path: polygon(3% 0%, 95% 0%, 100% 100%, 1% 100%);
     background-color: rgba(0,0,0,0);
@@ -245,7 +291,16 @@ article#louie {
     position: relative;
     height: var(--main-height);
     /* background-color:red; */
-    width:50%;
+    width:30%;
+}
+
+article#shoop {
+    transition: all .3s;
+    z-index: 0;
+    position: relative;
+    height: var(--main-height);
+    /* background-color:red; */
+    width:30%;
 }
 
 article#wfc {
@@ -254,7 +309,7 @@ article#wfc {
     z-index: 0;
 
     height: var(--main-height);
-    width:50%;
+    width:30%;
 }
 
 article#about {
@@ -266,26 +321,33 @@ article#about {
     margin: auto;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     section#projects {
         flex-direction: column;
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     article#wfc {
         width: 100%;
         margin: auto;
     }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     article#louie {
         width: 100%;
         margin: auto;
     }
 }
+@media only screen and (max-width: 800px) {
+    article#shoop {
+        width: 100%;
+        margin: auto;
+    }
+}
 
-@media only screen and (max-width: 700px) {
+
+@media only screen and (max-width: 800px) {
     article#about {
         width: 90%;
         margin: auto;
