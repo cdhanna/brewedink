@@ -322,7 +322,7 @@ article#about {
     margin: auto;
 }
 
-#about #talks a:hover {
+#talks a:hover {
     opacity: 1;
 }
 
