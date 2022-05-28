@@ -322,6 +322,10 @@ article#about {
     margin: auto;
 }
 
+#about #talks a:hover {
+    opacity: 1;
+}
+
 @media only screen and (max-width: 800px) {
     section#projects {
         flex-direction: column;
