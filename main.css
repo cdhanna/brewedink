@@ -13,6 +13,7 @@ html, body {
     height:100%;
     font-family: 'Grandstander';
     margin: 0;
+    --width: 25%;
 } 
 html {
 
@@ -112,7 +113,7 @@ h3 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    clip-path: polygon(15% 25%, 77% 18%, 73% 83%, 10% 80%);
+    clip-path: polygon(8% 15%, 87% 8%, 83% 83%, 2% 80%);
     background-color: rgba(0,0,0,.8);
     background-blend-mode: luminosity;
 
@@ -166,6 +167,29 @@ h3 {
 }
 
 
+#crt-main {
+    position: absolute;
+
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: -1;
+    background-image: url('./gifs/crtfree.gif');
+
+    background-size:90%;
+    background-repeat:repeat;
+    background-position: center;
+    clip-path: polygon(4% 5%,   94% 9%,   88% 89%,   1% 82%);
+    background-color: rgba(0,0,0,.8);
+    background-blend-mode: luminosity;
+
+    transition: all .3s;
+}
+
+article#crt.active,
 article#shoop.active,
 article#wfc.active,
 article#louie.active {
@@ -193,6 +217,8 @@ article#shoop.active #shoop-title img {
     transform: rotate(-1deg);
 }
 
+
+article#crt h2,
 article#wfc h2 {
     transition: all .3s;
     font-weight: bold;
@@ -203,6 +229,13 @@ article#wfc h2 {
     text-align: center;
     text-shadow: 2px 2px black, 0px 0px 12px black;
 }
+article#crt h2 {
+    font-family: monospace;
+    transform: rotate(-1deg);
+
+}
+
+article#crt.active h2,
 article#wfc.active h2 {
     font-size: 8vh;
     transform: rotate(-1deg);
@@ -214,6 +247,13 @@ article#wfc.active h2 {
     bottom: 10%;
     left: 0;
     right: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.active .text-wrap {
+    transition: all .3s .2s linear;
+    opacity: 1;
+    pointer-events: allo;
 }
 .text-wrap#shoop-wrap{
     position: absolute;
@@ -281,6 +321,12 @@ article#wfc.active #wfc-main {
     background-color: rgba(0,0,0,0);
 }
 
+
+article#crt.active #crt-main {
+    clip-path: polygon(3% 0%, 95% 0%, 100% 100%, 1% 100%);
+    background-color: rgba(0,0,0,0);
+}
+
 section#projects{
     display: flex;
     flex-direction: row;
@@ -292,7 +338,7 @@ article#louie {
     position: relative;
     height: var(--main-height);
     /* background-color:red; */
-    width:33%;
+    width:var(--width);
 }
 
 article#shoop {
@@ -301,7 +347,7 @@ article#shoop {
     position: relative;
     height: var(--main-height);
     /* background-color:red; */
-    width:33%;
+    width:var(--width);
 }
 
 article#wfc {
@@ -310,7 +356,17 @@ article#wfc {
     z-index: 0;
 
     height: var(--main-height);
-    width:34%;
+    width:var(--width);
+}
+
+
+article#crt {
+    transition: all .3s;
+    position: relative;
+    z-index: 0;
+
+    height: var(--main-height);
+    width:var(--width);
 }
 
 article#about {
@@ -333,6 +389,12 @@ article#about {
 }
 
 @media only screen and (max-width: 800px) {
+    article#crt {
+        width: 100%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 800px) {
     article#wfc {
         width: 100%;
         margin: auto;
@@ -348,6 +410,13 @@ article#about {
     article#shoop {
         width: 100%;
         margin: auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .text-wrap {
+        opacity: 1;
+        pointer-events: all;
     }
 }
 
