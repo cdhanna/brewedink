@@ -98,6 +98,9 @@ h3 {
 #socials a div.twitter {
     background-image: url('./images/twitter.png');
 }
+#socials a div.discord {
+    background-image: url('./images/discord.png');
+}
 #louie-main {
     position: absolute;
 
