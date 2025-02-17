@@ -1,6 +1,80 @@
 <script>
     import { expoInOut } from "svelte/easing";
 
+
+  //   #socials a div.linkedin {
+  //   background-image: url("./images/linkedin.svg");
+  // }
+  // #socials a div.youtube {
+  //   background-image: url("./images/youtube.svg");
+  // }
+  // #socials a div.twitter {
+  //   background-image: url("./images/twitter.svg");
+  // }
+  // #socials a div.discord {
+  //   background-image: url("./images/discord.svg");
+  // }
+  // #socials a div.github {
+  //   filter: brightness(.4);
+  //   background-image: url("./images/github.svg");
+  // }
+  // #socials a div.bluesky {
+  //   background-image: url("./images/bluesky.svg");
+  // }
+
+  // <a href="https://github.com/cdhanna">
+  //         <div class="github"></div>
+  //       </a>
+  //       <a href="https://discord.gg/yxFAFJurvU">
+  //         <div class="discord"></div>
+  //       </a>
+  //       <a href="https://twitter.com/BrewedInkGames">
+  //         <div class="twitter"></div>
+  //       </a>
+  //       <a href="https://bsky.app/profile/brewedink.bsky.social">
+  //         <div class="bluesky"></div>
+  //       </a>
+  //       <a href="https://www.youtube.com/channel/UCBjnzVXcl7-r8yfK2eWnsWQ">
+  //         <div class="youtube"></div>
+  //       </a>
+  //       <a href="https://www.linkedin.com/in/christopher-hanna/">
+  //         <div class="linkedin"></div>
+  //       </a>
+
+  let socials = [
+    {
+      title: 'Github',
+      link: 'https://github.com/cdhanna',
+      image: './images/github.svg',
+      class: 'github'
+    },
+    {
+      title: 'Discord',
+      link: 'https://discord.gg/yxFAFJurvU',
+      image: './images/discord.svg'
+    },
+    {
+      title: 'Twitter (stale)',
+      link: 'https://twitter.com/BrewedInkGames',
+      image: './images/twitter.svg'
+    },
+    {
+      title: 'BlueSky',
+      link: 'https://bsky.app/profile/brewedink.bsky.social',
+      image: './images/bluesky.svg'
+    },
+    {
+      title: 'Youtube',
+      link: 'https://www.youtube.com/channel/UCBjnzVXcl7-r8yfK2eWnsWQ',
+      image: './images/youtube.svg'
+    },
+    {
+      title: 'Linked-In',
+      link: 'https://www.linkedin.com/in/christopher-hanna/',
+      image: './images/linkedin.svg'
+    },
+  ]
+
   let rows=[
     [
       { 
@@ -197,24 +271,16 @@
       </div>
       <div id="socials">
         <!-- Icons from https://github.com/edent/SuperTinyIcons/tree/master -->
-        <a href="https://github.com/cdhanna">
-          <div class="github"></div>
-        </a>
-        <a href="https://discord.gg/yxFAFJurvU">
-          <div class="discord"></div>
-        </a>
-        <a href="https://twitter.com/BrewedInkGames">
-          <div class="twitter"></div>
-        </a>
-        <a href="https://bsky.app/profile/brewedink.bsky.social">
-          <div class="bluesky"></div>
-        </a>
-        <a href="https://www.youtube.com/channel/UCBjnzVXcl7-r8yfK2eWnsWQ">
-          <div class="youtube"></div>
-        </a>
-        <a href="https://www.linkedin.com/in/christopher-hanna/">
-          <div class="linkedin"></div>
-        </a>
+         {#each socials as social}
+          <a href={social.link} title={social.title} >
+            <div class={social.class} style="
+            background-image: url({social.image})
+          ">
+
+            </div>
+          </a>
+         {/each}
+        
       </div>
     </article>
   </div>
@@ -659,7 +725,7 @@
     height: 36px;
   }
 
-  #socials a div.linkedin {
+  /* #socials a div.linkedin {
     background-image: url("./images/linkedin.svg");
   }
   #socials a div.youtube {
@@ -670,14 +736,14 @@
   }
   #socials a div.discord {
     background-image: url("./images/discord.svg");
-  }
+  } */
   #socials a div.github {
     filter: brightness(.4);
-    background-image: url("./images/github.svg");
+    /* background-image: url("./images/github.svg"); */
   }
-  #socials a div.bluesky {
+  /* #socials a div.bluesky {
     background-image: url("./images/bluesky.svg");
-  }
+  }  */
 
   @media ( (max-height: 900px)) or (max-width: 1000px) {
     /* @media (min-aspect-ratio: 1.2) { */

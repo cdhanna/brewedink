@@ -20,7 +20,7 @@
   src: url("fonts/LemonTuesday.otf");
 }
 html {
-  background: linear-gradient(0deg, rgba(82,60,8,1) 3%, rgba(30,30,30,1) 34%);
+  background: linear-gradient(0deg, rgb(42, 27, 0) 3%, rgba(30,30,30,1) 84%);
 
   height: 100%;
   margin: 0;
