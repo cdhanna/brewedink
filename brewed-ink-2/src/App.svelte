@@ -2,45 +2,6 @@
     import { expoInOut } from "svelte/easing";
 
 
-  //   #socials a div.linkedin {
-  //   background-image: url("./images/linkedin.svg");
-  // }
-  // #socials a div.youtube {
-  //   background-image: url("./images/youtube.svg");
-  // }
-  // #socials a div.twitter {
-  //   background-image: url("./images/twitter.svg");
-  // }
-  // #socials a div.discord {
-  //   background-image: url("./images/discord.svg");
-  // }
-  // #socials a div.github {
-  //   filter: brightness(.4);
-  //   background-image: url("./images/github.svg");
-  // }
-  // #socials a div.bluesky {
-  //   background-image: url("./images/bluesky.svg");
-  // }
-
-  // <a href="https://github.com/cdhanna">
-  //         <div class="github"></div>
-  //       </a>
-  //       <a href="https://discord.gg/yxFAFJurvU">
-  //         <div class="discord"></div>
-  //       </a>
-  //       <a href="https://twitter.com/BrewedInkGames">
-  //         <div class="twitter"></div>
-  //       </a>
-  //       <a href="https://bsky.app/profile/brewedink.bsky.social">
-  //         <div class="bluesky"></div>
-  //       </a>
-  //       <a href="https://www.youtube.com/channel/UCBjnzVXcl7-r8yfK2eWnsWQ">
-  //         <div class="youtube"></div>
-  //       </a>
-  //       <a href="https://www.linkedin.com/in/christopher-hanna/">
-  //         <div class="linkedin"></div>
-  //       </a>
-
   let socials = [
     {
       title: 'Github',
@@ -272,7 +233,7 @@
       <div id="socials">
         <!-- Icons from https://github.com/edent/SuperTinyIcons/tree/master -->
          {#each socials as social}
-          <a href={social.link} title={social.title} >
+          <a href={social.link} title={social.title} class="social">
             <div class={social.class} style="
             background-image: url({social.image})
           ">
@@ -429,7 +390,7 @@
   }
 
   .row.big .col.big .thing-title {
-    margin-top: 14%;
+    margin-top: 1%;
   }
   .row.big .col.big .thing-title img {
     max-width: 60%;
@@ -441,7 +402,7 @@
   .thing-title {
     transition: all .25s ease-in-out;
     font-size: 2em;
-    margin-top: 7%;
+    margin-top: 11%;
   }
 
   .thing-title span {
@@ -510,7 +471,7 @@
     border: solid 1px rgb(100,100,100);
     margin: 12px auto;
     max-width: 30%;
-    padding-bottom: 6px;
+    /* padding-bottom: 6px; */
     filter: drop-shadow(0px 5px 20px black);
   }
   .unity-btn img {
@@ -725,25 +686,13 @@
     height: 36px;
   }
 
-  /* #socials a div.linkedin {
-    background-image: url("./images/linkedin.svg");
+  .social {
+    margin-right: 5px;
   }
-  #socials a div.youtube {
-    background-image: url("./images/youtube.svg");
-  }
-  #socials a div.twitter {
-    background-image: url("./images/twitter.svg");
-  }
-  #socials a div.discord {
-    background-image: url("./images/discord.svg");
-  } */
+
   #socials a div.github {
     filter: brightness(.4);
-    /* background-image: url("./images/github.svg"); */
   }
-  /* #socials a div.bluesky {
-    background-image: url("./images/bluesky.svg");
-  }  */
 
   @media ( (max-height: 900px)) or (max-width: 1000px) {
     /* @media (min-aspect-ratio: 1.2) { */
