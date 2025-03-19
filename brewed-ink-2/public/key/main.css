@@ -29,6 +29,9 @@ background-repeat: no-repeat;
     background-attachment: fixed;
     /* overflow-y: hidden; */
 }
+iframe {
+    max-width: 520px;
+}
 
 #title {
     height: var(--title-height);
