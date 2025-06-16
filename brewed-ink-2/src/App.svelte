@@ -1,7 +1,6 @@
 <script>
     import { expoInOut } from "svelte/easing";
 
-
   let socials = [
     {
       title: 'Github',
@@ -82,7 +81,7 @@
         descriptionRotation: 8,
         descriptionHtml: `<p>A Unity3D asset store package that brings Nuget to your Assembly Definitions!</p>`,
         unityAsset: {
-          price: '$4.99',
+          price: 'Free',
           image: 'https://assetstorev1-prd-cdn.unity3d.com/key-image/cc230320-8bf6-42bf-81b7-2d34e898cd47.jpg'
         }
       },
@@ -108,7 +107,7 @@
         backgroundStyle: 'cover',
         descriptionHtml: `<p>A Unity3D asset store package that renders Markdown in the Inspector, and in the Runtime, using UIToolkit!</p>`,
         unityAsset: {
-          price: '$4.99',
+          price: 'Free',
           image: 'https://assetstorev1-prd-cdn.unity3d.com/key-image/e56af371-e490-435d-a6a1-8421426a33a3.jpg'
         }
       },
