@@ -3,7 +3,7 @@
 ## MonoGame 2D Shader Tutorial Overview
 Dec 17th, 2025, MonoGame Open Hours
 
-[Link to video](https://www.youtube.com/live/cpnlUjbH5lM?si=LPaXxz3EteqpNDNN&t=3288)
+[Link to video](https://www.youtube.com/live/cpnlUjbH5lM?si=fEangOuUMiwt-2S2&t=3155)
 [Link to presentation](https://docs.google.com/presentation/d/1jNKeoHIm_AOqaj0vYA1YBbNHQlKXPKqI7UpeiyGNZw0/edit?usp=sharing)
 
 ## Louie - A technical post mortem
